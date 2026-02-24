@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholrSpace</title>
+    <link rel="stylesheet" href="SS_Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <div id="login-form" class="form active">
+                <h1>Student Login</h1>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="login-admission">Admission No.</label>
+                        <input type="text" id="login-admission" placeholder="Enter your admission number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p class="error-message" id="login-error"></p>
+                </form>
+                <p class="toggle-text">Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="form">
+                <h1>Student Registration</h1>
+                <form onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-admission">Admission No.</label>
+                        <input type="text" id="register-admission" placeholder="Enter your admission number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <p class="error-message" id="register-error"></p>
+                </form>
+                <p class="toggle-text">Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="SS_Script.js"></script>
+</body>
+</html>
